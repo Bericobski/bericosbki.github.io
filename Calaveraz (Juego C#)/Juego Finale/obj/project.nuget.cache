@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "6Y+7oBJLC/P6lejXerUoqzirtma4CGptKie9B98XP2oBKxluk1DAGY6jC+lk6l8S0hFKfwSu1Z6PihWe2WElRw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bruno\\OneDrive\\Escritorio\\Image\\Intro a videojuegos 2021\\Juego Finale\\Juego + Ejecutable\\Juego Finale\\Calaveraz.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bruno\\.nuget\\packages\\csfml\\2.5.0\\csfml.2.5.0.nupkg.sha512",
+    "C:\\Users\\bruno\\.nuget\\packages\\sfml.audio\\2.5.0\\sfml.audio.2.5.0.nupkg.sha512",
+    "C:\\Users\\bruno\\.nuget\\packages\\sfml.graphics\\2.5.0\\sfml.graphics.2.5.0.nupkg.sha512",
+    "C:\\Users\\bruno\\.nuget\\packages\\sfml.net\\2.5.0\\sfml.net.2.5.0.nupkg.sha512",
+    "C:\\Users\\bruno\\.nuget\\packages\\sfml.system\\2.5.0\\sfml.system.2.5.0.nupkg.sha512",
+    "C:\\Users\\bruno\\.nuget\\packages\\sfml.window\\2.5.0\\sfml.window.2.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
