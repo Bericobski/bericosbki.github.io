@@ -8,6 +8,8 @@ Descomprimir el zip. Ejecutar el .exe y A JUGAR
 
 Video de demo adjunto.
 
+-------------------------------------------------------------------------------------
+
 A project done by me and a friend. To learn how the godot engine works. 
 
 A maze game inspired by "The Divine Comedy". Help Dante find Beatriz in
@@ -17,6 +19,8 @@ that the darkness devours you.
 Unzip the zip. Run the .exe and PLAY
 
 Demo video attached.
+
+--------------------------------------------------------------------------------------
 
 Por cualquier consulta o querer contactarme, escribir a: 
 brunobevilacqua@live.com.ar
