@@ -17,3 +17,6 @@ that the darkness devours you.
 Unzip the zip. Run the .exe and PLAY
 
 Demo video attached.
+
+Por cualquier consulta o querer contactarme, escribir a: 
+brunobevilacqua@live.com.ar
