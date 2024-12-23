@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argego</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script src="js/script.js"></script>.
+</head>
+
+
+<!-- Chequear flex -->
+
+<body>
+    
+    
+    <header>
+        <a href="index.html"> 
+            <img src="favicon.ico" id="favi">
+        </a>
+    </header>
+
+
+
+    <nav>
+        <ul>
+            <!-- Sección izquierda del menú -->
+            <div class="left-section">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="HTML/acerca.html">Acerca de</a></li>
+                <li><a href="HTML/reseñas.html">Reseñas</a></li>
+                <li><a href="HTML/contact.html">Contacto</a></li>
+            </div>
+    
+            
+
+
+            
+
+            <!-- Ventana deslizante del carrito -->
+            <div id="ventana-carrito">
+                <h2>Mi Carrito-Ventana</h2>
+                <button id="btn-cerrarCarrito" onclick="toggleCarrito()">X</button>
+                <div id="lista-carrito"></div>
+                <div id="total">Total: $0</div>
+                <button id="btn-vaciarCarrito" onclick="vaciarCarrito()">Vaciar Carrito</button>
+            </div>
+        
+
+            <div class="right-section">
+                <button id="btn-carrito" onclick="toggleCarrito()">🛒 Carrito</button>
+                <button id="login" onclick="mostrarFormularioInicioSesion()">Login</button>
+                <button id="register" onclick="mostrarFormularioRegistro()">Register</button>
+            </div>
+
+            
+        </ul>
+    </nav>
+
+    <!-- Contenedor para los formularios -->
+    <div id="formulario"></div>
+
+    <!-- Contenedor para mostrar el estado de la sesión -->
+    <div id="estado-sesion"></div>
+    <main>
+        
+        
+
+
+        <!-- Sección de productos ***********************************************************************************************************************************-->
+        <section class="productos">
+            <div class="producto">
+                <a href="HTML/Games/cards.html">
+                <img src="Assets/Images/cards.jpg" alt="Juego 1" loading="lazy">
+                <h3>Cards of Prophecy</h3>
+                <p>$500</p>
+                </a>
+            </div>
+            <div class="producto">
+                <a href="HTML/Games/sente.html">
+                <img src="Assets/Images/sente.jpg" alt="Juego 2" loading="lazy">
+                <h3>Sente</h3>
+                <p>$700</p>
+                </a>
+            </div>
+            <div class="producto">
+                <a href="HTML/Games/theswampDau.html">
+                <img src="Assets/Images/swampd.jpeg" alt="Juego 3" loading="lazy">
+                <h3>The Swamp Daughter</h3>
+                <p>$600</p>
+                </a>
+            </div>
+            <div class="producto">
+                <a href="HTML/Games/talesoftheUn.html">
+                <img src="Assets/Images/tales uncanny.jpg" alt="Juego 4" loading="lazy">
+                <h3>Tales of the Uncanny</h3>
+                <p>$1000</p>
+                </a>
+            </div>
+            <div class="producto">
+                <a href="HTML/Games/deadSale.html">
+                <img src="Assets/Images/deadsale.jpg" alt="Juego" loading="lazy">
+                <h3>Dead Sale</h3>
+                <p>$80</p>
+                </a>
+            </div> 
+            <div class="producto">
+                <a href="HTML/Games/Goslimey.html">
+                <img src="Assets/Images/goslime.jpg" alt="Juego" loading="lazy">
+                <h3>Go Slimey Go</h3>
+                <p>$100</p>
+                </a>
+            </div>
+            <div class="producto">
+                <a href="HTML/Games/Madison.html">
+                <img src="Assets/Images/madison2.jpg" alt="Juego" loading="lazy">
+                <h3>Madison</h3>
+                <p>$600</p>
+                </a>
+            </div>
+            <div class="producto">
+                <a href="HTML/Games/Payloader.html">
+                <img src="Assets/Images/payloader.jpg" alt="Juego" loading="lazy">
+                <h3>Payloaders Strike</h3>
+                <p>$450</p>
+                </a>
+            </div>
+            <div class="producto">
+                <a href="HTML/Games/storyteller.html">
+                <img src="Assets/Images/storyteller2.jpg" alt="Juego" loading="lazy">
+                <h3>Storyteller</h3>
+                <p>$750</p>
+                </a>
+            </div>
+            <div class="producto">
+                <a href="HTML/Games/survivingthehumans.html">
+                <img src="Assets/Images/Surviving the humans.jpg" alt="Juego" loading="lazy">
+                <h3>Surviving the Humans</h3>
+                <p>$350</p>
+                </a>
+            </div>
+            <div class="producto">
+                <a href="HTML/Games/100lil.html">
+                <img src="Assets/Images/100 lil.jpg" alt="Juego" loading="lazy">
+                <h3>100 lil jumps</h3>
+                <p>$10</p>
+                </a>
+            </div>
+            <div class="producto">
+                <a href="HTML/Games/asimpledoor.html">
+                <img src="Assets/Images/a simpledoor.jpg" alt="Juego" loading="lazy">
+                <h3>A Simple Door</h3>
+                <p>$200</p>
+                </a>
+            </div>
+            <!-- Agrega más productos según sea necesario -->
+        </section>
+
+    
+    <!-- Contenedor de reseñas *******************************************************************************************************************************-->
+    <div class="reviews-container">
+        <h1>Reseñas de Videojuegos</h1>
+
+        <!-- Grid de reseñas -->
+        <div class="reviews-grid">
+            <!-- Reseña 1 -->
+            <div class="review-card">
+                <h2>Juego 1</h2>
+                <p>Calificación: ★★★★☆</p>
+                <p>Descripción: Este es un juego increíble con una historia envolvente y gráficos excepcionales.</p>
+            </div>
+
+            <!-- Reseña 2 -->
+            <div class="review-card">
+                <h2>Juego 2</h2>
+                <p>Calificación: ★★★☆☆</p>
+                <p>Descripción: Un juego entretenido, aunque con algunos puntos mejorables en la jugabilidad.</p>
+            </div>
+
+            <!-- Reseña 3 -->
+            <div class="review-card">
+                <h2>Juego 3</h2>
+                <p>Calificación: ★★★★★</p>
+                <p>Descripción: Excelente experiencia de juego, llena de acción y desafíos. Muy recomendable.</p>
+            </div>
+
+            <!-- Reseña 4 -->
+            <div class="review-card">
+                <h2>Juego 4</h2>
+                <p>Calificación: ★★☆☆☆</p>
+                <p>Descripción: No alcanzó las expectativas; problemas en los gráficos y en la estabilidad del juego.</p>
+            </div>
+            
+        </div>
+    </div>
+    </main>
+
+    <footer>
+        <p>Info de contacto</p>
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

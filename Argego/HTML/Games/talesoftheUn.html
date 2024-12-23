@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argego game</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../CSS/styles.css"> <!-- Vincula el archivo CSS -->
+    <script src="../../js/script.js" defer></script>.
+</head>
+<body>
+
+    <header>
+        <a href="../../index.html"> 
+            <img src="../../favicon.ico" id="favi">
+        </a>
+    </header>
+
+
+
+
+    <nav>
+        <ul>
+            <!-- Sección izquierda del menú -->
+            <div class="left-section">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../acerca.html">Acerca de</a></li>
+                <li><a href="../reseñas.html">Reseñas</a></li>
+                <li><a href="../contact.html">Contacto</a></li>
+            </div>
+    
+            
+            <!-- Ventana deslizante del carrito -->
+            <div id="ventana-carrito">
+                <h2>Mi Carrito-Ventana</h2>
+                <button id="btn-cerrarCarrito" onclick="toggleCarrito()">X</button>
+                <div id="lista-carrito"></div>
+                <div id="total">Total: $0</div>
+                <button id="btn-vaciarCarrito" onclick="vaciarCarrito()">Vaciar Carrito</button>
+            </div>
+        
+
+            <div class="right-section">
+                <button id="btn-carrito" onclick="toggleCarrito()">🛒 Carrito</button>
+                <button id="login" onclick="mostrarFormularioInicioSesion()">Login</button>
+                <button id="register" onclick="mostrarFormularioRegistro()">Register</button>
+            </div>
+
+            
+        </ul>
+    </nav>
+    
+    <!-- Contenedor para los formularios -->
+    <div id="formulario"></div>
+
+    <!-- Contenedor para mostrar el estado de la sesión -->
+    <div id="estado-sesion"></div>
+
+
+    <main class="game-page">
+        <!-- Título del juego -->
+        <section class="game-title">
+            <h1>Tales of the Uncanny</h1>
+        </section>
+
+        <!-- Galería de imágenes y videos -->
+        <section class="game-gallery">
+            
+            <img src="../../Assets/Images/tales uncanny.jpg" alt="Imagen del juego" class="gallery-item">
+            
+        </section>
+
+        <section class="game-details">
+            <div class="game-price-add">
+                <!-- Precio del juego -->
+                <p class="game-price">$1000</p>
+        
+                <!-- Botón para agregar al carrito -->
+                <button class="add-to-cart-button" 
+                        data-id="11" 
+                        data-nombre="Tales of the Uncanny" 
+                        data-precio="1000" 
+                        onclick="agregarProducto(event)">
+                    Agregar al carrito
+                </button>
+            </div>
+            <div class="game-summary">
+                <h2>Descripción</h2>
+                <p>Un juego que pondrá a prueba tu habilidad.</p>
+            </div>
+        </section>
+
+        
+        <!-- Contenedor de reseñas *******************************************************************************************************************************-->
+    <div class="reviews-container">
+        <h1>Reseñas de Videojuegos</h1>
+
+        <!-- Grid de reseñas -->
+        <div class="reviews-grid">
+            <!-- Reseña 1 -->
+            <div class="review-card">
+                <h2>Marta</h2>
+                <p>Calificación: ★★★★☆</p>
+                <p>Excelentes graficos.</p>
+            </div>
+
+            <!-- Reseña 2 -->
+            <div class="review-card">
+                <h2>Pablo</h2>
+                <p>Calificación: ★★★☆☆</p>
+                <p>Podria ser mas largo.</p>
+            </div>
+
+            <!-- Reseña 3 -->
+            <div class="review-card">
+                <h2>Gamer222</h2>
+                <p>Calificación: ★★★★★</p>
+                <p>Este juego me cambio la vida, super recomendado, no s3 lo pierdan</p>
+            </div>
+
+            <!-- Reseña 4 -->
+            <div class="review-card">
+                <h2>Pablo</h2>
+                <p>Calificación: ★★☆☆☆</p>
+                <p>Medio malardo</p>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+
+    </main>
+</body>
+</html>

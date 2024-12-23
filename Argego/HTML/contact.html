@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <title>Contacto | Página de Videojuegos</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+    <!-- Barra de navegación (reemplaza este contenido con tu barra de navegación) -->
+    <nav>
+        <ul>
+            <!-- Sección izquierda del menú -->
+            <div class="left-section">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+                <li><a href="reseñas.html">Reseñas</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </div>
+    
+            <!-- Sección derecha del menú -->
+            <div class="right-section">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <!-- Formulario de contacto -->
+    <div class="form-container">
+        <h1>Contacto</h1>
+        <form action="https://formspree.io/f/mqakbjkb" method="POST">
+            <!-- Nombre -->
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Correo electrónico -->
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Mensaje -->
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <!-- Enviar -->
+            <button id="btn-contact" type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
