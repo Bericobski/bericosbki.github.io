@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Arte</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon"> <!-- Favicon -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Train+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/persona-style.css">
+    
+</head>
+<body>
+    <!-- Contenedor Principal -->
+    <div class="container">
+        
+
+        <!-- Contenido Principal -->
+        <main>
+
+            
+            
+            
+
+            <div class="gallery-container contact-form">
+                <h1>CONTACT</h1>
+                <h2>E-Mail: brunobevilacqua@live.com.ar</h2>
+                <h2>Socials: @bericobski</h2>
+                <div class="icons-row">
+                    <a href="mailto:brunobevilacqua@live.com.ar?subject=Consulta&body=Hello%20Bericobski,%20" target="_blank" id="icon">
+                        <img src="../Assets/ICONS/email-1-svgrepo-com.svg" alt="IG Icon" width="50" height="50">
+                    </a>
+                    
+                </div>
+                <form
+                    id="contactForm"
+                    action="https://formspree.io/f/mkggrodz"
+                    method="POST"
+                >
+                    <label>
+                        Your name:*
+                        <input type="text" name="name" required placeholder="Ingresa tu nombre">
+                    </label>
+                    <label>
+                        Your email:*
+                        <input type="email" name="email" required placeholder="Ingrese su correo">
+                    </label>
+                    <label>
+                        Your message:*
+                        <textarea name="message" required placeholder="Escribe tu mensaje"></textarea>
+                    </label>
+                    <button type="submit">Enviar</button>
+                    <p class="form-message success" hidden>¡Tu mensaje fue enviado con éxito!</p>
+                    <p class="form-message error" hidden>Hubo un problema al enviar el mensaje. Intenta de nuevo.</p>
+                </form>
+
+            </div>
+            
+            
+
+            
+
+           
+
+            
+            
+            
+        </main>
+
+        <nav class="sidebar">
+            
+            <ul>
+                <div class="floating-icon">
+                    <a href="../index.html">
+                        <img src="../Assets/Logo.jpg" alt="Enlace" />
+                    </a>
+                </div>
+                <li><a href="about.html">About</a></li>
+                <br>
+                <li><a href="personal.html">Personal</a></li>
+                <li><a href="animations.html">Animation</a></li>
+                <li><a href="background.html">Backgrounds</a></li>
+                <li><a href="concept-art.html">Concept Art</a></li>
+                <li><a href="chracter-design.html">Character Design</a></li>
+                <br>
+                <li><a href="contact.html">Contact</a></li>
+                <div class="sidebar-icons">
+                    <a href="https://www.instagram.com/bericobski/" target="_blank">
+                        <img src="../Assets/ICONS/icons8-instagram-150.svg" alt="IG Icon" width="30" height="50">
+                    </a> 
+                    <a href="https://x.com/Bericobski" target="_blank">
+                        <img src="../Assets/ICONS/icons8-twitter-150.svg" alt="Twitter Icon" width="30" height="50">
+                    </a> 
+                    <a href="https://linktr.ee/bericobski" target="_blank">
+                        <img src="../Assets/ICONS/icons8-linktree-100.svg" alt="Linktree Icon" width="30" height="50">
+                    </a> 
+                </div>
+                
+            </ul>
+        </nav>
+
+        <!-- Footer -->
+        <footer>
+            
+            <a href="https://www.instagram.com/bericobski/" target="_blank">
+                <img src="../Assets/ICONS/icons8-instagram-150.svg" alt="IG Icon" width="30" height="50">
+            </a> 
+            <a href="https://x.com/Bericobski" target="_blank">
+                <img src="../Assets/ICONS/icons8-twitter-150.svg" alt="Twitter Icon" width="30" height="50">
+            </a> 
+            <a href="https://linktr.ee/bericobski" target="_blank">
+                <img src="../Assets/ICONS/icons8-linktree-100.svg" alt="Linktree Icon" width="30" height="50">
+            </a> 
+        </div>
+        </footer>
+        
+    
+    
+    </div>
+
+    <!-- Modal -->
+    <div class="modal">
+        <span class="close-modal">&times;</span>
+        <span class="arrow left">&#9664;</span>
+        <span class="arrow right">&#9654;</span>
+        <img src="" alt="Imagen ampliada" class="fade-in">
+    </div>
+    
+
+    <script src="../JS/galleries-js.js"></script>
+    
+</body>
+</html>
+

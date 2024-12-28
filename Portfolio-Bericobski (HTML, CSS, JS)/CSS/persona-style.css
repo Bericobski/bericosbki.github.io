@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&family=Zen+Tokyo+Zoo&display=swap');
+
+
+:root {
+    --main-letters: #ff7f11;
+    --main-letters-font: 'Train One';
+    --second-letters-col: #ffb96a;
+    --third-letters-col: #ffefdc;
+    --second-letters-font: 'Roboto Mono';
+    --secular-one-font: 'Secular One';
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    color: #333;
+    background-color: #151f24;
+    overflow-x: hidden;
+    display: flex;
+    opacity: 0; /* Oculta la página inicialmente */
+    transform: translateY(20px); /* Mueve el contenido ligeramente hacia abajo */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Suaviza los cambios */
+}
+
+
+/* Estilos finales */
+body.loaded {
+    opacity: 1; /* Hace visible el contenido */
+    transform: translateY(0); /* Vuelve el contenido a su posición original */
+}
+
+
+h2{
+    text-align: center;
+    font-family: var(--main-letters-font), cursive;
+    color: var(--main-letters);
+    text-decoration: none;
+}
+
+
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Contenedor Principal */
+.container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Barra de Navegación Lateral */
+.sidebar {
+    /*background-color: #2a3b4c;*/
+    color: white;
+    height: 500px; /* Altura total de la grid */
+    display: flex;
+    padding: 20px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 10px 10px 0; /* Redondea solo las esquinas del Bloque B */
+    margin-top: 170px;
+}
+
+.sidebar ul { 
+    
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--main-letters);
+    font-family: var(--main-letters-font), cursive;
+    transition: color 0.3s;
+}
+
+
+
+
+
+
+
+.sidebar a:hover {
+    color: #e0690c;
+}
+
+
+
+
+  
+  
+.modal {
+    display: none; /* Oculto inicialmente */
+    position: fixed; /* Relativo al viewport */
+    top: 50%; /* Centramos */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ajuste absoluto al centro */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    z-index: 1000; /* Aseguramos que esté en la capa superior */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal img {
+    max-width: 95vw; /* Restricción de ancho */
+    max-height: calc(100vh - 20px); /* Restando 20 píxeles del tamaño del viewport */    
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* Sombra */
+  }
+  
+
+  
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+  
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f0f0f0; /* Color de fondo del círculo */
+    border-radius: 50%; /* Hace que el fondo sea circular */
+    width: 50px; /* Ajusta el tamaño del círculo */
+    height: 50px; /* Debe ser igual al ancho para mantenerlo circular */
+    display: flex; /* Para centrar la flecha dentro del círculo */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    transition: background-color 0.3s, transform 0.3s; /* Efectos suaves */
+    cursor: pointer; /* Cambia el cursor a una mano */
+}
+
+.arrow svg {
+    width: 20px; /* Ajusta el tamaño del icono de flecha */
+    height: 20px;
+    fill: #333; /* Color de la flecha */
+}
+
+.arrow:hover{
+    background-color: #cccccc;
+}
+
+.arrow.left {
+    left: 20px;
+}
+
+.arrow.right {
+    right: 20px;
+}
+
+
+/* Botón de Retorno al Inicio */
+.back-to-top {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-top a {
+    text-decoration: none;
+    color: var(--main-letters);
+    font-family: var(--main-letters-font), cursive;
+    transition: color 0.3s;
+    font-size: 30px;
+}
+
+.back-to-top a:hover {
+    color: #e0690c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--main-letters);
+    margin: 0 10px;
+    font-family: var(--main-letters-font), cursive;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #e0690c;
+}
+
+
+
+
+.floating-icon img {
+    width: 200px; /* Tamaño del ícono */
+    height: 200px;
+    margin-bottom: 50px;
+    
+    object-fit: contain; /* Ajusta la imagen al contenedor sin deformarla */
+    border-radius: 8px;
+}
+
+.floating-icon:hover {
+    
+    cursor: pointer;
+}
+
+.sidebar-icons{
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+
+
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+  
+.fade-in.active {
+    opacity: 1;
+} 
+
+
+
+#grid-container-rederection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    justify-items: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+#may-like{
+    text-align: center; 
+    font-family: var(--main-letters-font);
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+/* Estilos de Secciones */
+.preview-section {
+    /*background-color: white;
+    border: 1px solid #ccc;*/
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.2s;
+}
+
+.preview-section:hover {
+    cursor: pointer;
+    filter: grayscale(100%); /* Aplica el filtro de escala de grises */
+    
+
+}
+
+.preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+} 
+
+
+
+
+
+
+
+
+
+
+/* Grid de Secciones */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Dos columnas */
+    gap: 20px;
+    padding: 20px;
+}
+
+
+
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.gallery-title {
+    font-family: var(--main-letters-font), cursive;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--main-letters);;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    width: 100%; 
+    height: auto;
+    
+}
+
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: zoom-in; /* Esto cambiará el cursor a una lupa con el signo "+" */
+} 
+
+.gallery-item video{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    
+}
+
+/****************************************************************************************************************************************/
+/*ABOUT*/
+
+#about-text{
+    font-family: var(--second-letters-font);
+    color: var(--third-letters-col);
+    font-size: 20px;
+}
+
+
+/***************************************************************************************************************************************/
+/*PERSONAL*/
+
+#gallery-p-001{
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */ 
+    gap: 10px; /* Espacio entre los elementos del grid */ 
+    grid-auto-flow: dense; /* Rellenar huecos automáticamente */
+    
+} 
+
+#gallery-p-002{
+    grid-template-columns: repeat(2, 1fr); /* 3 columnas de igual tamaño */ 
+}
+
+.gal-item-p-001 img{
+    max-width: 100%;
+    max-height: 250px;
+} 
+
+#puppet{
+    scale: 80%;
+}
+
+/********************************************************************************************************************************************/
+/*CONCEPT*/
+
+#gallery-conc-002{
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */ 
+}
+
+.wide-item{
+    grid-column: span 3; /* Ocupa las tres columnas */
+    height: 100%;
+}
+
+
+
+.h3-conc{
+    color: var(--second-letters-col);
+    font-size: 25px;
+}
+
+h3{
+    color: var(--second-letters-col);
+    font-size: 25px;
+}
+
+
+/*********************************************************************************************************************************/
+
+/*CHARACTER DESIGN*/
+
+#gallery-chdes-002{
+    grid-template-columns: repeat(1, 1fr); /* 3 columnas de igual tamaño */ 
+}
+
+.wide-item2{
+    grid-column: span 2; /* Ocupa las tres columnas */
+    height: 100%;
+}
+
+
+/**********************************************************************************************************************************/
+
+/*CONTACT*/ 
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+.contact-form h1,
+.contact-form h2 {
+    text-align: center;
+    margin: 0;
+    color: var(--second-letters-col);
+    font-size: 25px;
+    font-family: var(--secular-one-font);
+}
+
+
+
+.contact-form h1{
+    font-size: 60px;
+    font-family: var(--main-letters-font);
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+
+.contact-form .icons-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.contact-form .icons-row i {
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.contact-form .icons-row i:hover {
+    color: #000;
+}
+
+.contact-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #333;
+    color: var(--second-letters-col);
+    font-family: var(--second-letters-font);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #e2fbff;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form button {
+    background-color: var(--second-letters-col);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: var(--second-letters-font);
+}
+
+.contact-form button:hover {
+    background-color: #009ad6;
+}
+
+.contact-form .form-message {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    
+}
+
+.contact-form .form-message.success {
+    color: green;
+}
+
+.contact-form .form-message.error {
+    color: red;
+} 
+
+
+#icon:hover{
+    background-color: #e2fbff;
+    
+    
+}
+
+#icon{
+    background-color: transparent; /* Fondo inicial */
+    border-radius: 500px;
+    transition: background-color 0.3s ease; /* Animación suave */
+}

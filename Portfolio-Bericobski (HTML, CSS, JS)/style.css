@@ -1,0 +1,213 @@
+:root {
+    --main-letters: #ff7f11;
+    --main-letters-font: 'Train One';
+}
+
+
+/* General */
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    color: #333;
+    background-color: #151f24;
+    overflow-x: hidden;
+    display: flex;
+    opacity: 0; /* Oculta la página inicialmente */
+    transform: translateY(20px); /* Mueve el contenido ligeramente hacia abajo */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Suaviza los cambios */
+}
+
+
+/* Estilos finales */
+body.loaded {
+    opacity: 1; /* Hace visible el contenido */
+    transform: translateY(0); /* Vuelve el contenido a su posición original */
+}
+
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Contenedor Principal */
+.container {
+    display: grid;
+    grid-template-columns:  4fr 1fr  ;
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px; 
+
+   
+}
+
+
+/* Barra de Navegación Lateral */
+.sidebar {
+   /* background-color: #2a3b4c;*/
+    color: white;
+    height: 500px; /* Altura total de la grid */
+    display: flex;
+    padding: 20px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 10px 10px 0; /* Redondea solo las esquinas del Bloque B */
+    margin-top: 170px;
+}
+
+.sidebar ul { 
+    
+    list-style: none;
+    padding: 0;
+    
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #ff7f11;
+    font-family: 'Train One', cursive;
+    transition: color 0.3s;
+}
+
+
+
+.sidebar-icons{
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+
+.sidebar a:hover {
+    color: #e0690c;
+}
+
+/* Grid de Secciones */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilos de Secciones */
+.preview-section {
+    /*background-color: white;
+    border: 1px solid #ccc;*/
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.preview-section:hover {
+    transform: scale(1.05);
+    
+}
+
+.preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Botón de Retorno al Inicio */
+.back-to-top {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-top a {
+    text-decoration: none;
+    color: #ff7f11;
+    font-family: 'Train One', cursive;
+    transition: color 0.3s;
+    font-size: 30px;
+}
+
+.back-to-top a:hover {
+    color: #e0690c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ff7f11;
+    margin: 0 10px;
+    font-family: 'Train One', cursive;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #e0690c;
+}
+
+
+
+
+.floating-icon img {
+    width: 200px; /* Tamaño del ícono */
+    height: 200px;
+    
+    object-fit: contain; /* Ajusta la imagen al contenedor sin deformarla */
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+.floating-icon:hover {
+    
+    cursor: pointer;
+}
+
+.sidebar-icons{
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+
+
+#grid-container-rederection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+}
+
+#may-like{
+    text-align: center; 
+    font-family: "Train one";
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+} 
+
+
+a {
+    text-decoration: none;
+} 
+
+
+
+h2{
+    text-align: center;
+    font-family: var(--main-letters-font), cursive;
+    color: var(--main-letters);
+    text-decoration: none;
+}
+
